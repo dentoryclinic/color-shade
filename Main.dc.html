@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>Dentory เลือกสียางจัดฟัน</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700;800&family=Prompt:wght@400;500;600&display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; background: #d6ebfc; font-family: Prompt, Kanit, system-ui, sans-serif; color: #0b1677; font-size: 16px; line-height: 1.5">
+
+<div style="position: absolute; top: -90px; right: -110px; width: 300px; height: 300px; border-radius: 50%; background: #b0defc; pointer-events: none"></div>
+<div style="position: absolute; top: 300px; left: -140px; width: 260px; height: 260px; border-radius: 50%; background: #e2e2fc; opacity: 0.7; pointer-events: none"></div>
+<div style="position: absolute; bottom: -120px; right: -80px; width: 280px; height: 280px; border-radius: 50%; background: #f8d0e4; opacity: 0.6; pointer-events: none"></div>
+
+<div ref="{{setScroller}}" style="position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; padding: 0 16px 128px; box-sizing: border-box">
+
+<sc-if value="{{isSplash}}" hint-placeholder-val="{{ true }}">
+<div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 20px; padding-top: 36px; text-align: center">
+<svg width="26" height="26" viewBox="0 0 24 24" style="position: absolute; top: 40px; left: 8px" aria-hidden="true"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z" fill="#fed34b"></path></svg>
+<svg width="16" height="16" viewBox="0 0 24 24" style="position: absolute; top: 84px; left: 44px" aria-hidden="true"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z" fill="#fed34b"></path></svg>
+<svg width="22" height="22" viewBox="0 0 24 24" style="position: absolute; top: 120px; right: 14px" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.4 5c2.1 0 3.6 1.2 4.6 2.7C12 6.2 13.5 5 15.6 5 19 5 21 8.6 19.6 11.8 17.5 16.4 12 21 12 21z" fill="#fc5490"></path></svg>
+<svg width="14" height="14" viewBox="0 0 24 24" style="position: absolute; top: 160px; right: 46px" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.4 5c2.1 0 3.6 1.2 4.6 2.7C12 6.2 13.5 5 15.6 5 19 5 21 8.6 19.6 11.8 17.5 16.4 12 21 12 21z" fill="#fc66a2"></path></svg>
+
+<img src="/_blob/81cb62662d9f8453d96d98ba55bd6008" alt="Dentory Dental Clinic" style="width: 120px; height: auto; display: block">
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+<div style="display: inline-flex; align-items: center; gap: 8px; transform: rotate(-3deg)">
+<span style="background: #fc5490; color: #ffffff; font-family: Kanit, sans-serif; font-weight: 700; font-size: 24px; line-height: 1; padding: 8px 18px; border-radius: 9999px; box-shadow: 0 8px 20px rgba(252, 84, 144, 0.32)">Explore</span>
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 18px; color: #0b5ffc">Braces Colours</span>
+</div>
+<div style="display: grid; margin-top: 4px">
+<span aria-hidden="true" style="grid-area: 1 / 1; font-family: Kanit, sans-serif; font-weight: 800; font-size: 60px; line-height: 1.1; color: #ffffff; -webkit-text-stroke: 12px #ffffff">สียางจัดฟัน</span>
+<h1 style="grid-area: 1 / 1; margin: 0; font-family: Kanit, sans-serif; font-weight: 800; font-size: 60px; line-height: 1.1; background: linear-gradient(90deg, #f86048 0%, #fc5490 35%, #9a40f8 68%, #40a8f8 100%); -webkit-background-clip: text; background-clip: text; color: transparent">สียางจัดฟัน</h1>
+</div>
+<p style="margin: 0; font-family: Kanit, sans-serif; font-weight: 600; font-size: 20px; color: #0b1677">เลือกสีที่ใช่...ในสไตล์คุณ <span style="color: #fc5490">♡</span></p>
+</div>
+
+<div style="position: relative; background: #ffffff; border-radius: 28px; padding: 16px 20px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); text-align: left; width: 100%; box-sizing: border-box">
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #0b1677">สำหรับคนไข้ Dentory ของเรา ไม่ต้องกดดันมาเลือกสียางที่คลินิกนะคะ เลือกได้ชิล ๆ จากมือถือ สบายใจเลย <span style="color: #fc5490">♥</span></p>
+<span style="position: absolute; bottom: -10px; left: 44px; width: 22px; height: 22px; background: #ffffff; transform: rotate(45deg); border-radius: 4px"></span>
+</div>
+
+<div style="width: 100%; display: flex; flex-direction: column; gap: 12px; margin-top: 4px">
+<p style="margin: 0; font-family: Kanit, sans-serif; font-weight: 700; font-size: 28px; line-height: 1.2">แค่ <span style="color: #fc5490; font-size: 48px; vertical-align: -6px">2</span> ขั้นตอน</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<div style="background: #ffffff; border-radius: 28px; padding: 16px 12px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; align-items: center; gap: 8px">
+<span style="width: 56px; height: 56px; border-radius: 9999px; background: #56aafc; color: #ffffff; font-family: Kanit, sans-serif; font-weight: 800; font-size: 40px; line-height: 56px; text-align: center">1</span>
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3">แตะสี แปะบนฟัน</span>
+<span style="font-size: 14px; color: #4a5394; line-height: 1.4">ลองได้ไม่จำกัด<br>ดูก่อนใส่จริง</span>
+</div>
+<div style="background: #ffffff; border-radius: 28px; padding: 16px 12px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; align-items: center; gap: 8px">
+<span style="width: 56px; height: 56px; border-radius: 9999px; background: #fc5490; color: #ffffff; font-family: Kanit, sans-serif; font-weight: 800; font-size: 40px; line-height: 56px; text-align: center; box-shadow: 0 8px 20px rgba(252, 84, 144, 0.32)">2</span>
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 17px; line-height: 1.3">ส่งให้คลินิกทาง LINE</span>
+<span style="font-size: 14px; color: #4a5394; line-height: 1.4">ประหยัดเวลา<br>ไม่ต้องเร่งรีบ</span>
+</div>
+</div>
+</div>
+
+<div style="width: 100%; display: flex; flex-direction: column; gap: 10px">
+<a href="tel:0814536424" style="display: flex; align-items: center; gap: 12px; min-height: 52px; background: #ffffff; border-radius: 9999px; padding: 8px 18px 8px 8px; text-decoration: none; color: #0b5ffc; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 9999px; background: #0b5ffc; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+<span>โทร 081-453-6424</span>
+</a>
+<a href="https://line.me/ti/p/@dentory" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; min-height: 52px; background: #ffffff; border-radius: 9999px; padding: 8px 18px 8px 8px; text-decoration: none; color: #0b5ffc; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 9999px; background: #06c755; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9-.1.5-.6 2-.6 2.3 0 .3.2.3.4.2.2-.1 2.9-1.9 4-2.7.6.1 1.3.2 1.9.2 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg></span>
+<span>LINE @dentory</span>
+</a>
+<a href="https://www.facebook.com/search/top/?q=Dentory%20Clinic" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 12px; min-height: 52px; background: #ffffff; border-radius: 9999px; padding: 8px 18px 8px 8px; text-decoration: none; color: #0b5ffc; font-weight: 600; font-size: 16px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<span style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 9999px; background: #0b5ffc; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></span>
+<span>Facebook: Dentory Clinic</span>
+</a>
+</div>
+
+<div style="width: 100%; box-sizing: border-box; background: #ffffff; border-radius: 28px; padding: 16px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; align-items: center; gap: 16px; text-align: left">
+<img src="/_blob/8410170e27dd37354014ffee831c4242" alt="QR Code เปิดหน้าเลือกสียางบนมือถือ" style="width: 104px; height: 104px; flex-shrink: 0; border-radius: 16px; background: #ffffff; border: 2px solid #d6ebfc">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 18px; line-height: 1.3">สแกนเลือกบนมือถือตัวเอง</span>
+<span style="font-size: 14px; color: #4a5394; line-height: 1.45">เลือกที่บ้านก็ได้ ส่งมาทาง LINE ก่อนวันนัดได้เลยค่ะ</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{showTopbar}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0 10px">
+<div style="display: flex; align-items: center; gap: 10px">
+<img src="/_blob/81cb62662d9f8453d96d98ba55bd6008" alt="Dentory" style="height: 40px; width: auto; display: block">
+<div style="display: flex; flex-direction: column; line-height: 1.2">
+<span style="font-family: Kanit, sans-serif; font-weight: 700; font-size: 18px">{{topTitle}}</span>
+<span style="font-size: 12px; color: #4a5394">{{topSub}}</span>
+</div>
+</div>
+<sc-if value="{{isPick}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{openPin}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: none; border-radius: 9999px; background: #ffffff; color: #4a5394; font-family: Prompt, sans-serif; font-size: 13px; cursor: pointer; box-shadow: 0 4px 12px rgba(43, 123, 248, 0.14)">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="3"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+พนักงาน
+</button>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{showSteps}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: flex-start; justify-content: center; gap: 4px; margin: 6px 0 16px">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+<div style="display: flex; align-items: flex-start; gap: 4px">
+<div style="display: flex; flex-direction: column; align-items: center; gap: 4px; width: 78px">
+<span style="{{s.dotStyle}}">{{s.mark}}</span>
+<span style="{{s.labelStyle}}">{{s.label}}</span>
+</div>
+<sc-if value="{{s.line}}" hint-placeholder-val="{{ true }}"><span style="width: 22px; height: 3px; border-radius: 3px; background: #b0defc; margin-top: 16px"></span></sc-if>
+</div>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{isConfirm}}" hint-placeholder-val="{{ false }}">
+<div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; padding: 4px 0 18px">
+<svg width="22" height="22" viewBox="0 0 24 24" style="position: absolute; top: 0; left: 82px" aria-hidden="true"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z" fill="#fed34b"></path></svg>
+<svg width="14" height="14" viewBox="0 0 24 24" style="position: absolute; top: 46px; right: 84px" aria-hidden="true"><path d="M12 0C13 7 17 11 24 12C17 13 13 17 12 24C11 17 7 13 0 12C7 11 11 7 12 0Z" fill="#fed34b"></path></svg>
+<span style="width: 72px; height: 72px; border-radius: 9999px; background: #fc5490; color: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(252, 84, 144, 0.32)"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<h2 style="margin: 4px 0 0; font-family: Kanit, sans-serif; font-weight: 700; font-size: 30px; line-height: 1.2">เลือกสีเรียบร้อย!</h2>
+<p style="margin: 0; font-size: 16px; color: #4a5394">คุณ{{patientName}} เลือกไว้แบบนี้ <span style="color: #fc5490">♡</span></p>
+</div>
+</sc-if>
+
+<sc-if value="{{showMouth}}" hint-placeholder-val="{{ false }}">
+<div style="background: #ffffff; border-radius: 28px; padding: 16px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 18px">ลองแปะสียางบนฟัน</span>
+<sc-if value="{{canClearAll}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{clearAll}}" style="min-height: 36px; padding: 0 12px; border: none; border-radius: 9999px; background: #f8d0e4; color: #d42f70; font-family: Prompt, sans-serif; font-weight: 600; font-size: 13px; cursor: pointer">ล้างทั้งหมด</button>
+</sc-if>
+</div>
+<sc-if value="{{canFillAll}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{fillAll}}" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; border: 2px dashed #fc66a2; border-radius: 9999px; background: #fff5fa; color: #d42f70; font-family: Kanit, sans-serif; font-weight: 600; font-size: 15px; cursor: pointer">
+<span style="{{armedDotStyle}}"></span>
+ใส่สีเบอร์ {{armedNum}} ทั้งปากเลย (16 ซี่)
+</button>
+</sc-if>
+<span style="font-size: 13px; color: #4a5394; padding-left: 6px">ฟันบน</span>
+<div style="background: linear-gradient(to bottom, #e9779f 0px, #f39bbd 14px, #f8d0e4 46px, #fde9f2 100%); border-radius: 28px 28px 40px 40px; padding: 12px 10px 18px; display: flex; justify-content: center; align-items: flex-start; gap: 2px">
+<sc-for list="{{upperTeeth}}" as="t" hint-placeholder-count="8">
+<button type="button" onClick="{{t.tap}}" aria-label="{{t.aria}}" style="{{t.style}}">
+<svg viewBox="0 0 40 48" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 3px 3px rgba(11, 22, 119, 0.18))"><defs><linearGradient id="dtEnamel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fafafc"></stop><stop offset="0.65" stop-color="#f1f1f5"></stop><stop offset="1" stop-color="#dfe0e7"></stop></linearGradient><linearGradient id="dtEnamelSide" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#dfe0e7" stop-opacity="0.7"></stop><stop offset="0.18" stop-color="#ffffff" stop-opacity="0"></stop><stop offset="0.82" stop-color="#ffffff" stop-opacity="0"></stop><stop offset="1" stop-color="#d6d7df" stop-opacity="0.8"></stop></linearGradient></defs><path d="M12 0 H28 C36 0 40 4 40 12 V33 C40 43 34 48 25 48 H15 C6 48 0 43 0 33 V12 C0 4 4 0 12 0 Z" fill="url(#dtEnamel)" stroke="#d4d5de" stroke-width="1" vector-effect="non-scaling-stroke"></path><path d="M12 0 H28 C36 0 40 4 40 12 V33 C40 43 34 48 25 48 H15 C6 48 0 43 0 33 V12 C0 4 4 0 12 0 Z" fill="url(#dtEnamelSide)"></path><path d="M8 6 C14 3 24 3 31 5.5 C27 8 15 8.5 8 6 Z" fill="#ffffff"></path></svg>
+<span style="{{t.gumStyle}}"></span>
+<span style="{{t.wireStyle}}"></span>
+<sc-if value="{{t.filled}}" hint-placeholder-val="{{ false }}">
+<span style="{{t.tieStyle}}"></span>
+</sc-if>
+<span style="{{t.bracketStyle}}"><span style="position: absolute; left: 2px; right: 2px; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 1px; background: #8a8d96"></span></span>
+<sc-if value="{{t.filled}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; bottom: -7px; right: -4px; z-index: 5; background: #0b1677; color: #ffffff; font-family: Kanit, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px; border-radius: 9999px; padding: 0 4px">{{t.num}}</span>
+</sc-if>
+</button>
+</sc-for>
+</div>
+<span style="font-size: 13px; color: #4a5394; padding-left: 6px">ฟันล่าง</span>
+<div style="background: linear-gradient(to top, #e9779f 0px, #f39bbd 14px, #f8d0e4 46px, #fde9f2 100%); border-radius: 40px 40px 28px 28px; padding: 18px 10px 12px; display: flex; justify-content: center; align-items: flex-end; gap: 2px">
+<sc-for list="{{lowerTeeth}}" as="t" hint-placeholder-count="8">
+<button type="button" onClick="{{t.tap}}" aria-label="{{t.aria}}" style="{{t.style}}">
+<svg viewBox="0 0 40 48" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 3px 3px rgba(11, 22, 119, 0.18))"><defs><linearGradient id="dtEnamel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fafafc"></stop><stop offset="0.65" stop-color="#f1f1f5"></stop><stop offset="1" stop-color="#dfe0e7"></stop></linearGradient><linearGradient id="dtEnamelSide" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#dfe0e7" stop-opacity="0.7"></stop><stop offset="0.18" stop-color="#ffffff" stop-opacity="0"></stop><stop offset="0.82" stop-color="#ffffff" stop-opacity="0"></stop><stop offset="1" stop-color="#d6d7df" stop-opacity="0.8"></stop></linearGradient></defs><path d="M12 0 H28 C36 0 40 4 40 12 V33 C40 43 34 48 25 48 H15 C6 48 0 43 0 33 V12 C0 4 4 0 12 0 Z" fill="url(#dtEnamel)" stroke="#d4d5de" stroke-width="1" vector-effect="non-scaling-stroke"></path><path d="M12 0 H28 C36 0 40 4 40 12 V33 C40 43 34 48 25 48 H15 C6 48 0 43 0 33 V12 C0 4 4 0 12 0 Z" fill="url(#dtEnamelSide)"></path><path d="M8 6 C14 3 24 3 31 5.5 C27 8 15 8.5 8 6 Z" fill="#ffffff"></path></svg>
+<span style="{{t.gumStyle}}"></span>
+<span style="{{t.wireStyle}}"></span>
+<sc-if value="{{t.filled}}" hint-placeholder-val="{{ false }}">
+<span style="{{t.tieStyle}}"></span>
+</sc-if>
+<span style="{{t.bracketStyle}}"><span style="position: absolute; left: 2px; right: 2px; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 1px; background: #8a8d96"></span></span>
+<sc-if value="{{t.filled}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; bottom: -7px; right: -4px; z-index: 5; background: #0b1677; color: #ffffff; font-family: Kanit, sans-serif; font-size: 10px; font-weight: 600; line-height: 15px; border-radius: 9999px; padding: 0 4px">{{t.num}}</span>
+</sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{isPick}}" hint-placeholder-val="{{ true }}">
+<p style="margin: 2px 0 0; font-size: 13px; line-height: 1.5; color: #4a5394; text-align: center">แตะสียางด้านล่าง แล้วแตะซี่ฟันที่อยากวาง · แตะซี่ที่มีสีอีกครั้งเพื่อลบ</p>
+</sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{isPick}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 28px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<h2 style="margin: 0; font-family: Kanit, sans-serif; font-weight: 700; font-size: 24px; line-height: 1.2">Pick your vibe <span style="color: #fc5490">♡</span></h2>
+<span style="background: #ffffff; color: #0b1677; font-family: Kanit, sans-serif; font-weight: 600; font-size: 13px; padding: 6px 12px; border-radius: 9999px; transform: rotate(3deg); box-shadow: 0 4px 12px rgba(43, 123, 248, 0.14)">108 สี · เลือกได้ 2 สี</span>
+</div>
+<div style="background: #e2e2fc; border-radius: 16px; padding: 10px 14px; display: flex; align-items: center; gap: 10px">
+<span style="{{armedDotStyle}}"></span>
+<span style="font-size: 14px; line-height: 1.45; color: #0b1677">{{hint}}</span>
+</div>
+<div style="display: flex; gap: 8px; overflow-x: auto; margin: 0 -16px; padding: 4px 16px 6px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="8">
+<button type="button" onClick="{{c.pick}}" aria-pressed="{{c.active}}" style="{{c.style}}">{{c.label}}</button>
+</sc-for>
+</div>
+<sc-if value="{{hasPaletteError}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; font-size: 14px; color: #d42f70; font-weight: 600">{{paletteError}}</p>
+</sc-if>
+<div style="background: #ffffff; border-radius: 28px; padding: 6px 8px 14px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<div style="height: 1px; background: #c9c3f0; margin: 12px 8px 8px"></div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 2px">
+<sc-for list="{{swatches}}" as="sw" hint-placeholder-count="24">
+<button type="button" onClick="{{sw.pick}}" aria-pressed="{{sw.armed}}" aria-label="{{sw.aria}}" style="{{sw.style}}">
+<span style="font-size: 11px; letter-spacing: 0.14em; color: #8a90b8; line-height: 1">{{sw.label}}</span>
+<svg width="66" height="32" viewBox="0 0 66 32" aria-hidden="true" style="display: block; overflow: visible">
+<path d="M15 20 L59 9" stroke="#0b1677" stroke-opacity="0.08" stroke-width="9" stroke-linecap="round"></path>
+<path d="M15 20 L59 9" stroke="{{sw.hex}}" stroke-opacity="0.75" stroke-width="7" stroke-linecap="round"></path>
+<circle cx="31" cy="21.5" r="1.7" fill="{{sw.hex}}" fill-opacity="0.45"></circle>
+<circle cx="37" cy="20" r="1.7" fill="{{sw.hex}}" fill-opacity="0.45"></circle>
+<circle cx="43" cy="18.5" r="1.7" fill="{{sw.hex}}" fill-opacity="0.45"></circle>
+<circle cx="15" cy="20" r="8" fill="none" stroke="#0b1677" stroke-opacity="0.1" stroke-width="8"></circle>
+<circle cx="15" cy="20" r="8" fill="none" stroke="{{sw.hex}}" stroke-width="6"></circle>
+<circle cx="15" cy="20" r="2.6" fill="#d0d1d8"></circle>
+<path d="M5 30.5 H61" stroke="#c9cbd6" stroke-width="0.8"></path>
+</svg>
+<span style="max-width: 100%; font-family: Kanit, sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; color: #0b1677; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{sw.cname}}</span>
+<sc-if value="{{sw.hasCnt}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; top: 2px; right: 4px; min-width: 20px; height: 20px; padding: 0 4px; box-sizing: border-box; border-radius: 9999px; background: #d42f70; color: #ffffff; font-family: Kanit, sans-serif; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; box-shadow: 0 0 0 2px #ffffff">{{sw.cnt}}</span>
+</sc-if>
+<sc-if value="{{sw.oos}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; inset: 0; border-radius: 16px; background: rgba(255, 255, 255, 0.78); color: #d42f70; font-family: Kanit, sans-serif; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">หมดชั่วคราว</span>
+</sc-if>
+<sc-if value="{{sw.low}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; top: 2px; left: 4px; min-width: 20px; height: 20px; padding: 0 4px; box-sizing: border-box; border-radius: 9999px; background: #fed34b; color: #0b1677; font-family: Kanit, sans-serif; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center">{{sw.stock}}</span>
+</sc-if>
+</button>
+</sc-for>
+</div>
+<div style="height: 1px; background: #c9c3f0; margin: 10px 8px 0"></div>
+</div>
+
+<button type="button" onClick="{{toggleChart}}" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; margin-top: 8px; border: 2px solid #ffffff; border-radius: 9999px; background: rgba(255, 255, 255, 0.6); color: #0b5ffc; font-family: Prompt, sans-serif; font-weight: 600; font-size: 15px; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"></rect><circle cx="9" cy="9" r="2"></circle><path d="M21 15l-5-5L5 21"></path></svg>
+{{chartLabel}}
+</button>
+<sc-if value="{{chartOpen}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<img src="/_blob/d85d5ebabab6cf622b816c137feaacdf" alt="รูปถ่ายชาร์ตสียาง 108 สี ต้นฉบับ" style="width: 100%; height: auto; display: block; border-radius: 28px; border: 6px solid #ffffff; box-sizing: border-box; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<p style="margin: 0; font-size: 13px; color: #4a5394; line-height: 1.5">สีบนจออาจต่างจากยางจริงนิดหน่อยตามแต่ละเครื่อง รูปนี้คือชาร์ตจริงไว้เทียบเบอร์สีค่ะ</p>
+</div>
+</sc-if>
+
+<div style="background: #ffffff; border-radius: 28px; padding: 24px 20px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; gap: 16px; margin-top: 16px">
+<div style="display: flex; align-items: center; gap: 10px">
+<span style="width: 40px; height: 40px; border-radius: 9999px; background: #e2e2fc; color: #7a30f8; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span>
+<div style="display: flex; flex-direction: column; line-height: 1.25">
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 20px">บอกเราหน่อยว่าเป็นใคร</span>
+<span style="font-size: 13px; color: #4a5394">พนักงานจะได้เตรียมยางให้ถูกคน</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="fName" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">ชื่อ-นามสกุล <span style="color: #d42f70">*</span></label>
+<input id="fName" type="text" value="{{name}}" onChange="{{onName}}" placeholder="เช่น สมชาย ใจดี" autocomplete="name" style="height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="fPhone" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">เบอร์โทร <span style="font-family: Prompt, sans-serif; font-weight: 400; color: #4a5394">(ถ้ามี)</span></label>
+<input id="fPhone" type="tel" inputmode="tel" value="{{phone}}" onChange="{{onPhone}}" placeholder="08x-xxx-xxxx" autocomplete="tel" style="height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+<sc-if value="{{hasPhoneError}}" hint-placeholder-val="{{ false }}"><span style="font-size: 13px; color: #d42f70; padding-left: 12px">{{phoneError}}</span></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="fDate" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">วันนัด <span style="font-family: Prompt, sans-serif; font-weight: 400; color: #4a5394">(ถ้ามี)</span></label>
+<input id="fDate" type="date" value="{{apptDate}}" onChange="{{onDate}}" style="height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="fNote" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">ฝากบอกพนักงาน <span style="font-family: Prompt, sans-serif; font-weight: 400; color: #4a5394">(ถ้ามี)</span></label>
+<textarea id="fNote" value="{{note}}" onChange="{{onNote}}" placeholder="เช่น อยากสลับลายสีทุกซี่" style="min-height: 84px; padding: 14px 18px; border: 2px solid #d6ebfc; border-radius: 24px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%; resize: vertical"></textarea>
+</div>
+<sc-if value="{{hasSubmitError}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 14px; color: #d42f70; font-weight: 600">{{submitError}}</p></sc-if>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isConfirm}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
+<div style="background: #ffffff; border-radius: 28px; padding: 16px 20px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 16px; color: #4a5394">สีที่เลือก</span>
+<sc-for list="{{summary}}" as="c" hint-placeholder-count="2">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="{{c.dotStyle}}"></span>
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 20px">#{{c.n}}</span>
+<span style="font-size: 16px; color: #4a5394">{{c.cname}} · {{c.count}} ซี่</span>
+</div>
+</sc-for>
+<sc-if value="{{hasAppt}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 10px; padding-top: 10px; border-top: 2px dashed #d6ebfc">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a30f8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+<span style="font-size: 16px">วันนัด <b style="font-family: Kanit, sans-serif; font-weight: 600">{{apptText}}</b></span>
+</div>
+</sc-if>
+</div>
+
+<div style="position: relative; background: #f8d0e4; border-radius: 28px; padding: 18px 20px; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #0b1677">กดปุ่มด้านล่างเพื่อส่งรายการสีให้คลินิกทาง LINE ได้เลยค่ะ พนักงานจะเตรียมยางไว้ให้ (หรือโชว์หน้านี้ที่เคาน์เตอร์ก็ได้นะคะ) <span style="color: #fc5490">♥</span></p>
+<a href="{{lineUrl}}" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; border-radius: 9999px; background: #06c755; color: #ffffff; text-decoration: none; font-family: Kanit, sans-serif; font-weight: 700; font-size: 24px; box-shadow: 0 8px 20px rgba(6, 199, 85, 0.32)">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9-.1.5-.6 2-.6 2.3 0 .3.2.3.4.2.2-.1 2.9-1.9 4-2.7.6.1 1.3.2 1.9.2 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+ส่งให้คลินิกทาง LINE
+</a>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<button type="button" onClick="{{redo}}" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; border: none; border-radius: 9999px; background: #ffffff; color: #0b5ffc; font-family: Kanit, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg>
+เลือกใหม่
+</button>
+<button type="button" onClick="{{goHome}}" style="display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; border: none; border-radius: 9999px; background: #ffffff; color: #0b5ffc; font-family: Kanit, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"></path><path d="M5 10v10h14V10"></path></svg>
+หน้าแรก
+</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isStaff}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 8px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<h2 style="margin: 0; font-family: Kanit, sans-serif; font-weight: 700; font-size: 24px">รายการของคนไข้</h2>
+<button type="button" onClick="{{backToPick}}" style="min-height: 40px; padding: 0 14px; border: none; border-radius: 9999px; background: #ffffff; color: #0b5ffc; font-family: Prompt, sans-serif; font-weight: 600; font-size: 14px; cursor: pointer">กลับหน้าเลือกสี</button>
+</div>
+<div style="background: #ffffff; border-radius: 28px; padding: 18px 20px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.6">แอปไม่ได้เก็บรายการไว้ในระบบนะคะ เมื่อคนไข้เลือกสีเสร็จ จะกดส่งสรุปเข้าแชท LINE ของคลินิก (@dentory) โดยตรง ดูรายการได้ที่แชท LINE เลยค่ะ</p>
+<a href="https://line.me/ti/p/@dentory" target="_blank" rel="noopener" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; border-radius: 9999px; background: #06c755; color: #ffffff; text-decoration: none; font-family: Kanit, sans-serif; font-weight: 700; font-size: 24px">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9-.1.5-.6 2-.6 2.3 0 .3.2.3.4.2.2-.1 2.9-1.9 4-2.7.6.1 1.3.2 1.9.2 5.5 0 10-3.6 10-8S17.5 3 12 3z"></path></svg>
+เปิดแชท LINE
+</a>
+</div>
+<button type="button" onClick="{{openColors}}" style="display: flex; align-items: center; gap: 14px; text-align: left; padding: 16px 20px; border: none; border-radius: 28px; background: #ffffff; color: #0b1677; cursor: pointer; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<span style="width: 48px; height: 48px; flex-shrink: 0; border-radius: 9999px; background: #e2e2fc; color: #7a30f8; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.8 1.8-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.7 1.8-1.7H17a4 4 0 0 0 4-4c0-4.4-4-8.2-9-8.2z"></path><circle cx="7.5" cy="11" r="1.2"></circle><circle cx="10" cy="7" r="1.2"></circle><circle cx="14.5" cy="7" r="1.2"></circle></svg></span>
+<span style="display: flex; flex-direction: column; gap: 2px; flex: 1">
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 18px">ปรับสี ชื่อ หมวด และสต็อก</span>
+<span style="font-family: Prompt, sans-serif; font-size: 13px; color: #4a5394">แก้สีให้ตรงยางจริง · ตั้งของหมด</span>
+</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b5ffc" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+</button>
+</div>
+</sc-if>
+
+<sc-if value="{{isStaffColors}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-top: 8px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<h2 style="margin: 0; font-family: Kanit, sans-serif; font-weight: 700; font-size: 22px; line-height: 1.2">ปรับสี · ชื่อ · หมวด · สต็อก</h2>
+<button type="button" onClick="{{backToStaff}}" style="min-height: 40px; padding: 0 14px; border: none; border-radius: 9999px; background: #ffffff; color: #0b5ffc; font-family: Prompt, sans-serif; font-weight: 600; font-size: 14px; cursor: pointer">กลับ</button>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.55; color: #4a5394">แตะสีเบอร์ที่ไม่ตรงกับยางจริง แล้วปรับให้ตรง ตั้งชื่อ หมวด หรือจำนวนคงเหลือ (สต็อกหมด = คนไข้เลือกไม่ได้) <b style="color: #0b1677">ค่าที่ปรับจะเห็นเฉพาะเครื่องนี้</b></p>
+
+<sc-if value="{{editing}}" hint-placeholder-val="{{ true }}">
+<div style="background: #ffffff; border-radius: 28px; padding: 20px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="{{editDotStyle}}"></span>
+<div style="display: flex; flex-direction: column; line-height: 1.25">
+<span style="font-family: Kanit, sans-serif; font-weight: 700; font-size: 22px">สีเบอร์ {{editNum}}</span>
+<span style="font-size: 13px; color: #4a5394">{{editStatus}}</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="eHex" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">รหัสสี</label>
+<div style="display: flex; align-items: center; gap: 10px">
+<input type="color" aria-label="เลือกสี" value="{{ePicker}}" onChange="{{onPicker}}" style="width: 50px; height: 50px; flex-shrink: 0; border: none; border-radius: 9999px; padding: 0; background: none; cursor: pointer">
+<input id="eHex" type="text" maxlength="7" value="{{eHex}}" onChange="{{onHex}}" placeholder="#4d6542" style="flex: 1; min-width: 0; height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="eName" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">ชื่อสีบนสวอทช์</label>
+<input id="eName" type="text" maxlength="24" value="{{eName}}" onChange="{{onEName}}" placeholder="เช่น เขียวเข้ม" style="height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="eCat" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">หมวดหมู่ (ใช้กรองหน้าคนไข้)</label>
+<select id="eCat" value="{{eCat}}" onChange="{{onECat}}" style="height: 50px; padding: 0 16px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+<sc-for list="{{catOptions}}" as="o" hint-placeholder-count="6">
+<option value="{{o.value}}">{{o.label}}</option>
+</sc-for>
+</select>
+<sc-if value="{{catCustom}}" hint-placeholder-val="{{ false }}">
+<input type="text" aria-label="ชื่อหมวดใหม่" maxlength="24" value="{{eCatCustom}}" onChange="{{onECatCustom}}" placeholder="พิมพ์ชื่อหมวดใหม่ เช่น ฟ้าพาสเทล" style="height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+</sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<label for="eStock" style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px">คงเหลือในสต็อก <span style="font-family: Prompt, sans-serif; font-weight: 400; color: #4a5394">(ว่าง = ไม่จำกัด)</span></label>
+<input id="eStock" type="number" min="0" step="1" value="{{eStock}}" onChange="{{onEStock}}" placeholder="ไม่จำกัด" style="height: 50px; padding: 0 18px; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Prompt, sans-serif; font-size: 16px; box-sizing: border-box; width: 100%">
+</div>
+<sc-if value="{{hasEditError}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 14px; color: #d42f70; font-weight: 600">{{eError}}</p></sc-if>
+<div style="display: flex; gap: 8px">
+<button type="button" onClick="{{saveEdit}}" style="flex: 1; min-height: 50px; border: none; border-radius: 9999px; background: #d42f70; color: #ffffff; font-family: Kanit, sans-serif; font-weight: 600; font-size: 17px; cursor: pointer; box-shadow: 0 8px 20px rgba(252, 84, 144, 0.32)">บันทึก</button>
+<button type="button" onClick="{{resetEdit}}" style="min-height: 50px; padding: 0 16px; border: none; border-radius: 9999px; background: #e2e2fc; color: #0b1677; font-family: Kanit, sans-serif; font-weight: 600; font-size: 15px; cursor: pointer">คืนค่าเดิม</button>
+<button type="button" onClick="{{closeEdit}}" aria-label="ปิด" style="width: 50px; min-height: 50px; border: none; border-radius: 9999px; background: #f4f9fe; color: #4a5394; cursor: pointer; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+</div>
+</sc-if>
+
+<div style="background: #ffffff; border-radius: 28px; padding: 6px 8px 14px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14)">
+<div style="height: 1px; background: #c9c3f0; margin: 12px 8px 8px"></div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 2px">
+<sc-for list="{{staffSwatches}}" as="sw" hint-placeholder-count="24">
+<button type="button" onClick="{{sw.pick}}" aria-label="{{sw.aria}}" style="{{sw.style}}">
+<span style="font-size: 11px; letter-spacing: 0.14em; color: #8a90b8; line-height: 1">{{sw.label}}</span>
+<svg width="66" height="32" viewBox="0 0 66 32" aria-hidden="true" style="display: block; overflow: visible">
+<path d="M15 20 L59 9" stroke="#0b1677" stroke-opacity="0.08" stroke-width="9" stroke-linecap="round"></path>
+<path d="M15 20 L59 9" stroke="{{sw.hex}}" stroke-opacity="0.75" stroke-width="7" stroke-linecap="round"></path>
+<circle cx="31" cy="21.5" r="1.7" fill="{{sw.hex}}" fill-opacity="0.45"></circle>
+<circle cx="37" cy="20" r="1.7" fill="{{sw.hex}}" fill-opacity="0.45"></circle>
+<circle cx="43" cy="18.5" r="1.7" fill="{{sw.hex}}" fill-opacity="0.45"></circle>
+<circle cx="15" cy="20" r="8" fill="none" stroke="#0b1677" stroke-opacity="0.1" stroke-width="8"></circle>
+<circle cx="15" cy="20" r="8" fill="none" stroke="{{sw.hex}}" stroke-width="6"></circle>
+<circle cx="15" cy="20" r="2.6" fill="#d0d1d8"></circle>
+<path d="M5 30.5 H61" stroke="#c9cbd6" stroke-width="0.8"></path>
+</svg>
+<span style="max-width: 100%; font-family: Kanit, sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; color: #0b1677; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{sw.cat}}</span>
+<sc-if value="{{sw.changed}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; top: 2px; right: 4px; width: 20px; height: 20px; border-radius: 9999px; background: #7a30f8; color: #ffffff; display: flex; align-items: center; justify-content: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+</sc-if>
+<sc-if value="{{sw.oos}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; inset: 0; border-radius: 16px; background: rgba(255, 255, 255, 0.78); color: #d42f70; font-family: Kanit, sans-serif; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">หมด</span>
+</sc-if>
+<sc-if value="{{sw.low}}" hint-placeholder-val="{{ false }}">
+<span style="position: absolute; top: 2px; left: 4px; min-width: 20px; height: 20px; padding: 0 4px; box-sizing: border-box; border-radius: 9999px; background: #fed34b; color: #0b1677; font-family: Kanit, sans-serif; font-size: 11px; font-weight: 700; line-height: 20px; text-align: center">{{sw.stock}}</span>
+</sc-if>
+</button>
+</sc-for>
+</div>
+<div style="height: 1px; background: #c9c3f0; margin: 10px 8px 0"></div>
+</div>
+</div>
+</sc-if>
+
+</div>
+
+<sc-if value="{{isSplash}}" hint-placeholder-val="{{ true }}">
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 16px 22px; background: linear-gradient(to top, #d6ebfc 65%, rgba(214, 235, 252, 0))">
+<button type="button" onClick="{{start}}" style="width: 100%; min-height: 64px; display: flex; align-items: center; justify-content: center; gap: 10px; border: none; border-radius: 9999px; background: #fc5490; color: #ffffff; font-family: Kanit, sans-serif; font-weight: 600; font-size: 26px; cursor: pointer; box-shadow: 0 8px 20px rgba(252, 84, 144, 0.32)">
+เริ่มเลือกสียาง
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</button>
+</div>
+</sc-if>
+
+<sc-if value="{{isPick}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 14px 16px 20px; background: linear-gradient(to top, #d6ebfc 65%, rgba(214, 235, 252, 0))">
+<div style="display: flex; align-items: center; gap: 10px; background: #ffffff; border-radius: 9999px; padding: 8px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.2)">
+<div style="display: flex; align-items: center; gap: 8px; padding-left: 10px">
+<div style="display: flex">
+<sc-for list="{{usedDots}}" as="d" hint-placeholder-count="2">
+<span style="{{d.style}}"></span>
+</sc-for>
+</div>
+<span style="font-family: Kanit, sans-serif; font-weight: 600; font-size: 14px; white-space: nowrap">{{usedLabel}}</span>
+</div>
+<button type="button" onClick="{{submit}}" aria-disabled="{{cannotSubmit}}" style="{{submitStyle}}">ยืนยันเลย</button>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{pinOpen}}" hint-placeholder-val="{{ false }}">
+<div style="position: absolute; inset: 0; z-index: 20; background: rgba(11, 22, 119, 0.45); display: flex; align-items: center; justify-content: center; padding: 16px">
+<div role="dialog" aria-label="รหัสพนักงาน" style="width: 100%; max-width: 310px; background: #ffffff; border-radius: 28px; padding: 24px; box-shadow: 0 8px 24px rgba(43, 123, 248, 0.14); display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center">
+<span style="width: 52px; height: 52px; border-radius: 9999px; background: #e2e2fc; color: #7a30f8; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="3"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span>
+<h3 style="margin: 0; font-family: Kanit, sans-serif; font-weight: 700; font-size: 22px">สำหรับพนักงาน</h3>
+<p style="margin: 0; font-size: 14px; color: #4a5394">ใส่รหัส 4 หลักเพื่อเข้าหน้าจัดการ</p>
+<input type="password" inputmode="numeric" maxlength="4" aria-label="รหัส 4 หลัก" value="{{pin}}" onChange="{{onPin}}" style="width: 100%; height: 56px; box-sizing: border-box; border: 2px solid #d6ebfc; border-radius: 9999px; background: #f4f9fe; color: #0b1677; font-family: Kanit, sans-serif; font-size: 26px; letter-spacing: 0.5em; text-align: center">
+<sc-if value="{{hasPinError}}" hint-placeholder-val="{{ false }}"><span style="font-size: 14px; color: #d42f70; font-weight: 600">{{pinError}}</span></sc-if>
+<div style="display: flex; gap: 8px; width: 100%">
+<button type="button" onClick="{{cancelPin}}" style="flex: 1; min-height: 48px; border: none; border-radius: 9999px; background: #e2e2fc; color: #0b1677; font-family: Kanit, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">ยกเลิก</button>
+<button type="button" onClick="{{submitPin}}" style="flex: 1; min-height: 48px; border: none; border-radius: 9999px; background: #d42f70; color: #ffffff; font-family: Kanit, sans-serif; font-weight: 600; font-size: 16px; cursor: pointer">เข้าสู่ระบบ</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"startView":{"editor":"enum","options":["splash","pick","confirm","staff","staffColors"],"default":"splash"},"kioskIdle":{"editor":"boolean","default":false},"$preview":{"width":390,"height":844}}'>
+var COLORS = {1:"#c3dfb0",2:"#9dc070",3:"#8fa988",4:"#427760",5:"#275337",6:"#25583c",7:"#327536",8:"#4b6e3a",9:"#6b8933",10:"#5dc5b2",11:"#4aa98a",12:"#84d48f",13:"#5dc03c",14:"#70be4c",15:"#a8e159",16:"#c9f5a2",17:"#d3ec49",18:"#c7df48",19:"#3c919f",20:"#215b7b",21:"#3771a3",22:"#2668a7",23:"#4eadcd",24:"#60bccb",25:"#8cd3d9",26:"#a6eadc",27:"#9bd2dd",28:"#20468f",29:"#031963",30:"#050b4b",31:"#0c2450",32:"#476a89",33:"#6aa4b6",34:"#6eb2df",35:"#81c2e7",36:"#87c5dc",37:"#356bd2",38:"#6f88cd",39:"#324389",40:"#8b7097",41:"#a689c3",42:"#b790d0",43:"#fa65b7",44:"#c45aa4",45:"#c76bc9",46:"#c63454",47:"#b72e24",48:"#b3251f",49:"#8a1b16",50:"#952040",51:"#622129",52:"#482140",53:"#3b3980",54:"#6b65ba",55:"#e9587d",56:"#f677ad",57:"#c78191",58:"#d3b1b2",59:"#ef8dc3",60:"#f495b5",61:"#efa9b4",62:"#f7bdb4",63:"#efb3b2",64:"#7e8384",65:"#9a9897",66:"#ead5a9",67:"#fcfe97",68:"#faac6d",69:"#fda235",70:"#ff6f44",71:"#df5b5e",72:"#efa9ac",73:"#010104",74:"#02095e",75:"#3f93d1",76:"#82fb49",77:"#fee148",78:"#ffb34a",79:"#fe7663",80:"#ff5883",81:"#e95896",82:"#eef1e6",83:"#1d030f",84:"#0f3462",85:"#1b41dc",86:"#071b16",87:"#53b732",88:"#ff6a34",89:"#ac252b",90:"#ff48aa",91:"#31305d",92:"#45296b",93:"#87376f",94:"#4b5b8e",95:"#123682",96:"#3d77a5",97:"#81b9e0",98:"#3c7980",99:"#69b5a7",100:"#e266a0",101:"#d55983",102:"#8b424f",103:"#692134",104:"#ba2e38",105:"#9a2517",106:"#fea180",107:"#9ae1cd",108:"#668a48"};
+var NAME_BASE = {"1":"เขียวอ่อน","2":"เขียว","3":"เขียว","4":"เขียว","5":"เขียวเข้ม","6":"เขียวเข้ม","7":"เขียว","8":"เขียว","9":"เขียว","10":"ฟ้าอมเขียว","11":"ฟ้าอมเขียว","12":"เขียว","13":"เขียว","14":"เขียว","15":"เขียว","16":"เขียวอ่อน","17":"เหลือง","18":"เหลือง","19":"ฟ้าอมเขียว","20":"ฟ้าเข้ม","21":"ฟ้า","22":"ฟ้า","23":"ฟ้า","24":"ฟ้าอมเขียว","25":"ฟ้าอมเขียวอ่อน","26":"ฟ้าอมเขียวอ่อน","27":"ฟ้าอมเขียวอ่อน","28":"ฟ้า","29":"ฟ้าเข้ม","30":"ฟ้าเข้ม","31":"ฟ้าเข้ม","32":"ฟ้า","33":"ฟ้าอมเขียว","34":"ฟ้า","35":"ฟ้าอ่อน","36":"ฟ้าอ่อน","37":"ฟ้า","38":"ฟ้า","39":"ฟ้า","40":"ม่วง","41":"น้ำเงิน","42":"ม่วงอ่อน","43":"ชมพูอ่อน","44":"ม่วง","45":"ม่วง","46":"แดง","47":"แดง","48":"แดง","49":"แดงเข้ม","50":"ชมพู","51":"แดงเข้ม","52":"ม่วงเข้ม","53":"ม่วง","54":"ม่วงอ่อน","55":"ชมพู","56":"ชมพูอ่อน","57":"ชมพูอ่อน","58":"แดงอ่อน","59":"ชมพูอ่อน","60":"ชมพูอ่อน","61":"โอรส","62":"ส้มพาสเทล","63":"แดงพาสเทล","64":"เทา","65":"เทาอ่อน","66":"สีไข่","67":"เหลืองอ่อน","68":"ส้มอ่อน","69":"ส้ม","70":"ส้ม","71":"ส้ม","72":"แดงอ่อน","73":"ดำ","74":"ฟ้าเข้ม","75":"ฟ้า","76":"เขียวเรืองแสง","77":"เหลือง","78":"ส้ม","79":"แดงอ่อน","80":"ชมพูเรืองแสง","81":"ชมพู","82":"ขาว","83":"ม่วงเข้มใส","84":"ฟ้าเข้มใส","85":"ฟ้า","86":"ฟ้าอมเขียวเข้ม","87":"เขียว","88":"ส้ม","89":"แดง","90":"ชมพู","91":"ฟ้าเข้ม","92":"น้ำเงินเข้ม","93":"ม่วง","94":"ฟ้า","95":"ฟ้าเข้ม","96":"ฟ้า","97":"ฟ้าอ่อน","98":"ฟ้าอมเขียว","99":"ฟ้าอมเขียว","100":"ชมพู","101":"ชมพู","102":"แดง","103":"ชมพูเข้ม","104":"แดง","105":"แดง","106":"ส้มอ่อน","107":"ฟ้าอมเขียวอ่อน","108":"เขียว"};
+var CATEGORY_BASE = {"1":"เขียว","2":"เขียว","3":"เขียว","4":"เขียว","5":"เขียว","6":"เขียว","7":"เขียว","8":"เขียว","9":"เขียว","10":"เขียว","11":"เขียว","12":"เขียว","13":"เขียว","14":"เขียว","15":"เขียว","16":"พาสเทล","17":"เขียว","18":"เขียว","19":"ฟ้า","20":"ฟ้า","21":"ฟ้า","22":"ฟ้า","23":"ฟ้าอมเขียว","25":"พาสเทล","26":"พาสเทล","27":"ฟ้าพาสเทล","28":"น้ำเงิน","29":"น้ำเงิน","30":"น้ำเงิน","31":"น้ำเงิน","35":"พาสเทล","42":"พาสเทล","53":"ม่วง","54":"ม่วง","57":"ชมพู","60":"พาสเทล","61":"ส้ม","62":"พาสเทล","63":"แดง","66":"เหลือง","67":"พาสเทล","70":"ส้ม","71":"ส้ม","72":"แดง","73":"ดำ","74":"น้ำเงิน","75":"ฟ้า","82":"ขาว","83":"สีใส","84":"สีใส","85":"สีใส","86":"สีใส","87":"สีใส","88":"สีใส","89":"สีใส","90":"สีใส","91":"กลิตเตอร์","92":"กลิตเตอร์","93":"กลิตเตอร์","94":"กลิตเตอร์","95":"กลิตเตอร์","96":"กลิตเตอร์","97":"กลิตเตอร์","98":"กลิตเตอร์","99":"กลิตเตอร์","100":"กลิตเตอร์","101":"กลิตเตอร์","102":"กลิตเตอร์","103":"กลิตเตอร์","104":"กลิตเตอร์","105":"กลิตเตอร์","106":"กลิตเตอร์","107":"กลิตเตอร์","108":"กลิตเตอร์"};
+var FAMILY_ORDER = ["เขียว","ฟ้าอมเขียว","ฟ้า","ฟ้าพาสเทล","น้ำเงิน","ม่วง","ชมพู","แดง","ส้ม","น้ำตาล","เหลือง","พาสเทล","สีใส","กลิตเตอร์","เทา","ดำ","ขาว"];
+var TEETH = 8;
+var MAX_COLORS = 2;
+var STAFF_PIN = "5555";
+var LOW_STOCK = 5;
+var LINE_OA_ID = "@dentory";
+var CLINIC = "Dentory Dental Clinic";
+var STORE_KEY = "dentory-braces-overrides";
+var DEMO_UP =[56, 35, 56, 35, 56, 35, 56, 35];
+var DEMO_LO = [35, 56, 35, 56, 35, 56, 35, 56];
+
+function hexToHSL(hex){
+  var r = parseInt(hex.slice(1,3),16)/255, g = parseInt(hex.slice(3,5),16)/255, b = parseInt(hex.slice(5,7),16)/255;
+  var max = Math.max(r,g,b), min = Math.min(r,g,b), h = 0, s = 0, l = (max+min)/2;
+  if(max !== min){
+    var d = max - min;
+    s = l > 0.5 ? d/(2-max-min) : d/(max+min);
+    if(max === r) h = (g-b)/d + (g < b ? 6 : 0);
+    else if(max === g) h = (b-r)/d + 2;
+    else h = (r-g)/d + 4;
+    h *= 60;
+  }
+  return { h: h, s: s*100, l: l*100 };
+}
+function familyParts(hex){
+  var p = hexToHSL(hex), h = p.h, s = p.s, l = p.l;
+  if(s < 12){ if(l < 22) return ["ดำ",""]; if(l > 85) return ["ขาว",""]; return ["เทา",""]; }
+  var base;
+  if(h < 15 || h >= 345) base = "แดง";
+  else if(h < 45) base = (l < 42 && s < 60) ? "น้ำตาล" : "ส้ม";
+  else if(h < 70) base = "เหลือง";
+  else if(h < 160) base = "เขียว";
+  else if(h < 195) base = "ฟ้าอมเขียว";
+  else if(h < 250) base = "ฟ้า";
+  else if(h < 275) base = "น้ำเงิน";
+  else if(h < 320) base = "ม่วง";
+  else base = "ชมพู";
+  return [base, l < 32 ? "เข้ม" : (l > 68 ? "อ่อน" : "")];
+}
+function emptyArch(){ var a = []; for(var i = 0; i < TEETH; i++) a.push(null); return a; }
+function isHex(s){ return /^#[0-9a-fA-F]{6}$/.test(s); }
+function isThaiPhone(s){ return /^0[0-9]{8,9}$/.test(String(s || "").replace(/[^0-9]/g, "")); }
+function fmtDate(d){
+  if(!d) return "";
+  try { var x = new Date(d + "T00:00:00"); if(isNaN(x.getTime())) return d; return new Intl.DateTimeFormat("th-TH-u-ca-buddhist", { day: "numeric", month: "short", year: "numeric" }).format(x); } catch(e){ return d; }
+}
+function dot(hex, size, ring){
+  return "display:inline-block;flex-shrink:0;width:" + size + "px;height:" + size + "px;border-radius:9999px;box-sizing:border-box;border:" + Math.round(size/4) + "px solid " + hex + ";background:#ffffff;box-shadow:" + (ring ? "0 0 0 2px #ffffff, " : "") + "0 2px 6px rgba(11,22,119,.18)";
+}
+
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    var v = props.startView || "splash";
+    var demo = v === "pick" || v === "confirm";
+    this.state = {
+      view: v,
+      upper: demo ? DEMO_UP.slice() : emptyArch(),
+      lower: demo ? DEMO_LO.slice() : emptyArch(),
+      armed: v === "pick" ? 56 : null,
+      filter: "all",
+      name: v === "confirm" ? "[ชื่อคนไข้]" : "",
+      phone: "", phoneError: "", apptDate: "", note: "",
+      submitError: "", paletteError: "", chartOpen: false,
+      pinOpen: false, pin: "", pinError: "",
+      ovColor: {}, ovName: {}, ovCat: {}, stock: {},
+      edit: null, eHex: "", eName: "", eCat: "", eCatCustom: "", eStock: "", eError: ""
+    };
+    if(v === "staffColors") Object.assign(this.state, this.editFields(1, this.state));
+    this.scroller = null;
+    this.lastActive = Date.now();
+    this.timer = null;
+  }
+
+  componentDidMount(){
+    try {
+      var raw = window.localStorage.getItem(STORE_KEY);
+      if(raw){
+        var d = JSON.parse(raw);
+        this.setState({ ovColor: d.ovColor || {}, ovName: d.ovName || {}, ovCat: d.ovCat || {}, stock: d.stock || {} });
+      }
+    } catch(e){}
+    var self = this;
+    this.timer = setInterval(function(){
+      if(!self.props.kioskIdle) return;
+      var v = self.state.view;
+      if(v === "splash" || v === "staff" || v === "staffColors") return;
+      if(Date.now() - self.lastActive > 45000) self.goHome();
+    }, 5000);
+  }
+  componentWillUnmount(){ if(this.timer) clearInterval(this.timer); }
+
+  persist(patch){
+    var s = Object.assign({}, this.state, patch);
+    try { window.localStorage.setItem(STORE_KEY, JSON.stringify({ ovColor: s.ovColor, ovName: s.ovName, ovCat: s.ovCat, stock: s.stock })); } catch(e){}
+  }
+  touch(patch){ this.lastActive = Date.now(); this.setState(patch); }
+  go(view, extra){
+    this.touch(Object.assign({ view: view }, extra || {}));
+    if(this.scroller) this.scroller.scrollTop = 0;
+  }
+
+  col(n, s){ s = s || this.state; return s.ovColor[n] || COLORS[n]; }
+  cname(n, s){ s = s || this.state; var o = s.ovName[n]; if(o && String(o).trim()) return String(o).trim(); if(NAME_BASE[n]) return NAME_BASE[n]; var p = familyParts(this.col(n, s)); return p[0] + p[1]; }
+  cat(n, s){ s = s || this.state; var o = s.ovCat[n]; if(o && String(o).trim()) return String(o).trim(); if(CATEGORY_BASE[n]) return CATEGORY_BASE[n]; return familyParts(this.col(n, s))[0]; }
+  stockOf(n, s){ s = s || this.state; var v = s.stock[n]; if(v === undefined || v === null || v === "") return null; var x = Number(v); return isNaN(x) ? null : x; }
+  used(s){ s = s || this.state; var out = []; s.upper.concat(s.lower).forEach(function(v){ if(v != null && out.indexOf(v) === -1) out.push(v); }); return out; }
+  countOf(n, s){ s = s || this.state; return s.upper.concat(s.lower).filter(function(v){ return v === n; }).length; }
+  inStock(n, s){ var x = this.stockOf(n, s); return x === null || x > 0; }
+  canUse(n, s){ var u = this.used(s); if(u.indexOf(n) !== -1) return true; return u.length < MAX_COLORS && this.inStock(n, s); }
+  categories(s){
+    var list = [];
+    for(var n = 1; n <= 108; n++){ var c = this.cat(n, s); if(list.indexOf(c) === -1) list.push(c); }
+    return list.sort(function(a, b){ var ra = FAMILY_ORDER.indexOf(a), rb = FAMILY_ORDER.indexOf(b); if(ra < 0) ra = 999; if(rb < 0) rb = 999; return ra !== rb ? ra - rb : a.localeCompare(b, "th"); });
+  }
+  editFields(n, s){
+    var st = this.stockOf(n, s);
+    var o = s.ovCat[n];
+    return { edit: n, eHex: this.col(n, s), eName: this.cname(n, s), eCat: (o && String(o).trim()) ? String(o).trim() : "", eCatCustom: "", eStock: st === null ? "" : String(st), eError: "" };
+  }
+
+  pickSwatch(n){
+    var s = this.state;
+    if(s.armed === n){ this.touch({ armed: null, paletteError: "" }); return; }
+    if(!this.canUse(n)){
+      var oos = !this.inStock(n);
+      this.touch({ paletteError: oos ? "สีเบอร์ " + n + " หมดชั่วคราวค่ะ ลองเลือกสีอื่นนะคะ" : "เลือกได้สูงสุด " + MAX_COLORS + " สีค่ะ ลบสีเดิมออกก่อนนะ" });
+      return;
+    }
+    this.touch({ armed: n, paletteError: "" });
+  }
+  tapTooth(arch, i){
+    var s = this.state;
+    if(s.view !== "pick") return;
+    var arr = s[arch].slice();
+    var patch = { paletteError: "" };
+    if(s.armed != null){ arr[i] = arr[i] === s.armed ? null : s.armed; }
+    else if(arr[i] != null){ arr[i] = null; }
+    else { this.touch({ paletteError: "แตะเลือกสียางด้านล่างก่อนนะคะ แล้วค่อยแตะซี่ฟัน" }); return; }
+    patch[arch] = arr;
+    this.touch(patch);
+  }
+  submit(){
+    var s = this.state;
+    var filled = this.used().length > 0;
+    if(!filled){ this.touch({ submitError: "ยังไม่ได้แปะสีบนฟันเลยนะคะ" }); return; }
+    if(!s.name.trim()){ this.touch({ submitError: "ใส่ชื่อก่อนนะคะ พนักงานจะได้รู้ว่าเป็นของใคร" }); return; }
+    if(s.phone.trim() && !isThaiPhone(s.phone)){ this.touch({ phoneError: "เบอร์ดูไม่ครบ ลองเช็กอีกทีนะคะ" }); return; }
+    var stock = Object.assign({}, s.stock), self = this, changed = false;
+    this.used().forEach(function(n){ var x = self.stockOf(n); if(x !== null){ stock[n] = Math.max(0, x - self.countOf(n)); changed = true; } });
+    if(changed) this.persist({ stock: stock });
+    this.go("confirm", { stock: stock, submitError: "", armed: null });
+  }
+  goHome(){
+    this.go("splash", { upper: emptyArch(), lower: emptyArch(), armed: null, filter: "all", name: "", phone: "", phoneError: "", apptDate: "", note: "", submitError: "", paletteError: "", chartOpen: false, pinOpen: false });
+  }
+  saveEdit(){
+    var s = this.state, n = s.edit;
+    var hex = String(s.eHex || "").trim().toLowerCase();
+    if(hex && hex.charAt(0) !== "#") hex = "#" + hex;
+    if(!isHex(hex)){ this.setState({ eError: "รหัสสีต้องเป็นแบบ #a1b2c3 นะคะ" }); return; }
+    var stockStr = String(s.eStock).trim();
+    if(stockStr !== "" && (isNaN(Number(stockStr)) || Number(stockStr) < 0)){ this.setState({ eError: "จำนวนสต็อกต้องเป็นเลข 0 ขึ้นไปค่ะ" }); return; }
+    var ovColor = Object.assign({}, s.ovColor), ovName = Object.assign({}, s.ovName), ovCat = Object.assign({}, s.ovCat), stock = Object.assign({}, s.stock);
+    if(hex !== COLORS[n]) ovColor[n] = hex; else delete ovColor[n];
+    var nm = String(s.eName || "").trim();
+    var autoName = NAME_BASE[n] || (familyParts(hex)[0] + familyParts(hex)[1]);
+    if(nm && nm !== autoName) ovName[n] = nm; else delete ovName[n];
+    var c = s.eCat === "__custom__" ? String(s.eCatCustom || "").trim() : s.eCat;
+    if(c) ovCat[n] = c; else delete ovCat[n];
+    if(stockStr === "") delete stock[n]; else stock[n] = Math.floor(Number(stockStr));
+    var patch = { ovColor: ovColor, ovName: ovName, ovCat: ovCat, stock: stock };
+    this.persist(patch);
+    var next = Object.assign({}, s, patch);
+    this.setState(Object.assign(patch, this.editFields(n, next), { eError: "" }));
+  }
+  resetEdit(){
+    var s = this.state, n = s.edit;
+    var ovColor = Object.assign({}, s.ovColor), ovName = Object.assign({}, s.ovName), ovCat = Object.assign({}, s.ovCat), stock = Object.assign({}, s.stock);
+    delete ovColor[n]; delete ovName[n]; delete ovCat[n]; delete stock[n];
+    var patch = { ovColor: ovColor, ovName: ovName, ovCat: ovCat, stock: stock };
+    this.persist(patch);
+    this.setState(Object.assign(patch, this.editFields(n, Object.assign({}, s, patch))));
+  }
+
+  renderVals(){
+    var s = this.state, self = this;
+    var v = s.view;
+    var used = this.used();
+    var filled = used.length > 0;
+
+    var stepIdx = v === "confirm" ? 3 : (filled ? 2 : 1);
+    var stepDefs = [["เลือกสี", "#56aafc"], ["กรอกข้อมูล", "#fc5490"], ["เสร็จแล้ว", "#7a30f8"]];
+    var steps = stepDefs.map(function(d, i){
+      var n = i + 1, done = n < stepIdx, active = n === stepIdx;
+      return {
+        mark: done ? "✓" : String(n),
+        label: d[0],
+        line: i < 2,
+        dotStyle: "width:36px;height:36px;border-radius:9999px;display:flex;align-items:center;justify-content:center;font-family:Kanit,sans-serif;font-weight:700;font-size:16px;" +
+          (active ? "background:" + d[1] + ";color:#ffffff;box-shadow:0 0 0 4px #ffffff, 0 8px 20px rgba(252,84,144,.25);transform:scale(1.08)" : done ? "background:#ffffff;color:#0b5ffc" : "background:rgba(255,255,255,.55);color:#4a5394"),
+        labelStyle: "font-size:12px;white-space:nowrap;" + (active ? "font-family:Kanit,sans-serif;font-weight:600;color:#0b1677" : "color:#4a5394")
+      };
+    });
+
+    function teethFor(arch){
+      // Upper row: even rounded crowns on a straight wire. Lower row: smile curve, outer teeth taller and tilted outward, wire rising at the ends.
+      var up = arch === "upper";
+      var c = (TEETH - 1) / 2;
+      return s[arch].map(function(num, i){
+        var dx = i - c, outer = i === 0 || i === TEETH - 1;
+        // Straight, evenly aligned rows: same size, no tilt, wire level.
+        var w = 35, h = up ? 44 : 42;
+        var y = 0, rot = 0, wireRot = 0, by = 50;
+        var top = "calc(" + by + "% - ";
+        return {
+          gumStyle: "position:absolute;z-index:0;left:-2px;right:-2px;height:14px;" + (up ? "top:-6px;border-radius:0 0 50% 50% / 0 0 100% 100%;background:linear-gradient(to bottom,#e9779f,#f39bbd)" : "bottom:-6px;border-radius:50% 50% 0 0 / 100% 100% 0 0;background:linear-gradient(to top,#e9779f,#f39bbd)") + ";box-shadow:0 " + (up ? "2px" : "-2px") + " 3px rgba(185,40,100,.18)",
+          wireStyle: "position:absolute;z-index:1;left:-2px;right:-2px;top:" + top + "1.5px);height:3px;border-radius:2px;background:linear-gradient(to bottom,#d4d6dc,#868993);transform:rotate(" + wireRot.toFixed(1) + "deg)",
+          bracketStyle: "position:absolute;z-index:3;left:50%;top:" + top + "7px);width:15px;height:14px;margin-left:-7.5px;box-sizing:border-box;border-radius:4px;border:1.5px solid #6e717b;background:linear-gradient(160deg,#fbfbfc 0%,#d7d8dd 45%,#a6a9b2 100%);box-shadow:0 1px 2px rgba(0,0,0,.25)",
+          filled: num != null,
+          num: num,
+          aria: "ฟัน" + (arch === "upper" ? "บน" : "ล่าง") + " ซี่ที่ " + (i + 1) + (num != null ? " สีเบอร์ " + num : " ว่าง"),
+          tap: function(){ self.tapTooth(arch, i); },
+          style: "position:relative;flex:0 0 auto;width:" + w + "px;height:" + h + "px;padding:0;background:transparent;border:none;transform:translateY(" + y.toFixed(1) + "px) rotate(" + rot + "deg);cursor:" + (v === "pick" ? "pointer" : "default"),
+          tieStyle: num != null ? "position:absolute;z-index:2;left:50%;top:" + top + "11px);width:24px;height:22px;margin-left:-12px;box-sizing:border-box;border-radius:9px;border:5px solid " + self.col(num) + ";box-shadow:0 1px 2px rgba(0,0,0,.25), inset 0 1px 1px rgba(255,255,255,.45)" : ""
+        };
+      });
+    }
+
+    var cats = this.categories();
+    var chips = ["all"].concat(cats).map(function(c){
+      var active = s.filter === c;
+      return {
+        label: c === "all" ? "ทั้งหมด" : c,
+        active: active,
+        pick: function(){ self.touch({ filter: c }); },
+        style: "flex-shrink:0;min-height:40px;padding:0 16px;border-radius:9999px;cursor:pointer;font-family:Kanit,sans-serif;font-weight:600;font-size:14px;white-space:nowrap;" +
+          (active ? "border:none;background:#d42f70;color:#ffffff;box-shadow:0 8px 20px rgba(252,84,144,.32)" : "border:2px solid #ffffff;background:rgba(255,255,255,.7);color:#0b1677")
+      };
+    });
+
+    var swatches = [];
+    for(var n = 1; n <= 108; n++){
+      if(s.filter !== "all" && this.cat(n) !== s.filter) continue;
+      (function(n){
+        var armed = s.armed === n;
+        var cnt = self.countOf(n);
+        var locked = !self.canUse(n);
+        var st = self.stockOf(n);
+        var oos = st !== null && st <= 0;
+        var low = !oos && st !== null && st <= LOW_STOCK;
+        var nm = self.cname(n);
+        swatches.push({
+          n: n, cname: nm, cnt: cnt, hasCnt: cnt > 0, oos: oos, low: low, stock: st, armed: armed,
+          aria: "สียางเบอร์ " + n + " โทน" + nm + (oos ? " (หมดชั่วคราว)" : (locked ? " (เลือกครบ 2 สีแล้ว)" : "")),
+          pick: function(){ self.pickSwatch(n); },
+          hex: self.col(n), label: n < 10 ? "0" + n : String(n),
+          style: "position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;padding:10px 2px 8px;border:none;border-radius:16px;cursor:" + (locked ? "not-allowed" : "pointer") + ";" +
+            (armed ? "background:#fff0f6;box-shadow:0 0 0 2px #fc5490, 0 8px 20px rgba(252,84,144,.25)" : "background:transparent;box-shadow:none") +
+            ";opacity:" + (locked && !oos ? "0.3" : "1") + ";transition:background .15s ease, box-shadow .15s ease, opacity .15s ease"
+        });
+      })(n);
+    }
+
+    var staffSwatches = [];
+    for(var m = 1; m <= 108; m++){
+      (function(n){
+        var st = self.stockOf(n);
+        var editing = s.edit === n;
+        staffSwatches.push({
+          n: n, cat: self.cat(n), stock: st,
+          oos: st !== null && st <= 0,
+          low: st !== null && st > 0 && st <= LOW_STOCK,
+          changed: !!(s.ovColor[n] || s.ovName[n] || s.ovCat[n]),
+          aria: "แก้ไขสียางเบอร์ " + n,
+          pick: function(){ self.setState(self.editFields(n, self.state)); if(self.scroller) self.scroller.scrollTop = 0; },
+          hex: self.col(n), label: n < 10 ? "0" + n : String(n),
+          style: "position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;padding:10px 2px 8px;border:none;border-radius:16px;cursor:pointer;" +
+            (editing ? "background:#f3eeff;box-shadow:0 0 0 2px #7a30f8" : "background:transparent;box-shadow:none")
+        });
+      })(m);
+    }
+
+    var catOptions = [{ value: "", label: "อัตโนมัติ (" + (s.edit ? (CATEGORY_BASE[s.edit] || familyParts(this.col(s.edit))[0]) : "") + ")" }]
+      .concat(cats.map(function(c){ return { value: c, label: c }; }))
+      .concat([{ value: "__custom__", label: "+ เพิ่มหมวดใหม่..." }]);
+
+    var summary = used.map(function(n){ return { n: n, cname: self.cname(n), count: self.countOf(n), dotStyle: dot(self.col(n), 40, false) }; });
+
+    var lineText = [
+      "แจ้งเลือกสียางจัดฟัน (" + CLINIC + ")",
+      "ชื่อ: " + s.name.trim(),
+      s.phone.trim() ? "เบอร์: " + s.phone.trim() : null,
+      s.apptDate ? "วันนัด: " + fmtDate(s.apptDate) : null,
+      "สีที่เลือก: " + (used.map(function(n){ return "#" + n + " (" + self.cname(n) + ")"; }).join(", ") || "-"),
+      "บน: " + s.upper.map(function(x){ return x == null ? "-" : x; }).join(",") + " / ล่าง: " + s.lower.map(function(x){ return x == null ? "-" : x; }).join(","),
+      s.note.trim() ? "หมายเหตุ: " + s.note.trim() : null
+    ].filter(function(l){ return l != null; }).join("\n");
+
+    var canSubmit = filled && s.name.trim().length > 0 && !s.phoneError;
+    var armedHex = s.armed != null ? this.col(s.armed) : "#ffffff";
+
+    return {
+      setScroller: function(el){ self.scroller = el; },
+      isSplash: v === "splash", isPick: v === "pick", isConfirm: v === "confirm", isStaff: v === "staff", isStaffColors: v === "staffColors",
+      showTopbar: v !== "splash",
+      showSteps: v === "pick" || v === "confirm",
+      showMouth: v === "pick" || v === "confirm",
+      topTitle: v === "staff" || v === "staffColors" ? "หลังร้าน" : "เลือกสียางจัดฟัน",
+      topSub: v === "staff" || v === "staffColors" ? "สำหรับพนักงาน Dentory" : "Dentory Dental Clinic",
+      steps: steps,
+      upperTeeth: teethFor("upper"), lowerTeeth: teethFor("lower"),
+      canClearAll: v === "pick" && filled,
+      canFillAll: v === "pick" && s.armed != null,
+      armedNum: s.armed,
+      armedDotStyle: s.armed != null ? dot(armedHex, 28, false) : "display:inline-block;flex-shrink:0;width:28px;height:28px;border-radius:9999px;border:2px dashed #7a30f8;box-sizing:border-box",
+      hint: s.armed != null ? "ถือสีเบอร์ " + s.armed + " (" + this.cname(s.armed) + ") อยู่ — แตะซี่ฟันที่อยากวางได้เลย" : "แตะสีเพื่อหยิบ แล้วแตะซี่ฟัน · สลับลาย 2 สีได้นะ",
+      chips: chips, swatches: swatches,
+      hasPaletteError: !!s.paletteError, paletteError: s.paletteError,
+      chartOpen: s.chartOpen,
+      chartLabel: s.chartOpen ? "ซ่อนรูปชาร์ตสีจริง" : "ดูรูปชาร์ตสีจริง (เทียบกับยางจริง)",
+      toggleChart: function(){ self.touch({ chartOpen: !self.state.chartOpen }); },
+      name: s.name, phone: s.phone, apptDate: s.apptDate, note: s.note,
+      onName: function(e){ self.touch({ name: e.target.value, submitError: "" }); },
+      onPhone: function(e){ var val = e.target.value; self.touch({ phone: val, phoneError: val.trim() && !isThaiPhone(val) ? "เบอร์ดูไม่ครบ ลองเช็กอีกทีนะคะ" : "" }); },
+      onDate: function(e){ self.touch({ apptDate: e.target.value }); },
+      onNote: function(e){ self.touch({ note: e.target.value }); },
+      hasPhoneError: !!s.phoneError, phoneError: s.phoneError,
+      hasSubmitError: !!s.submitError, submitError: s.submitError,
+      usedDots: used.map(function(n, i){ return { style: dot(self.col(n), 28, i > 0) + (i > 0 ? ";margin-left:-8px" : "") }; }).concat(used.length ? [] : [{ style: "display:inline-block;width:28px;height:28px;border-radius:9999px;border:2px dashed #b0defc;box-sizing:border-box" }]),
+      usedLabel: used.length + "/" + MAX_COLORS + " สี",
+      cannotSubmit: !canSubmit,
+      submitStyle: "flex:1;min-height:52px;border:none;border-radius:9999px;background:#fc5490;color:#ffffff;font-family:Kanit,sans-serif;font-weight:600;font-size:24px;cursor:pointer;box-shadow:0 8px 20px rgba(252,84,144,.32);transition:opacity .15s ease;opacity:" + (canSubmit ? "1" : "0.45"),
+      submit: function(){ self.submit(); },
+      clearAll: function(){ self.touch({ upper: emptyArch(), lower: emptyArch(), paletteError: "" }); },
+      fillAll: function(){ var a = self.state.armed; if(a == null) return; var arr = []; for(var i = 0; i < TEETH; i++) arr.push(a); self.touch({ upper: arr.slice(), lower: arr.slice() }); },
+      start: function(){ self.go("pick"); },
+      patientName: s.name,
+      summary: summary,
+      hasAppt: !!s.apptDate, apptText: fmtDate(s.apptDate),
+      lineUrl: "https://line.me/R/oaMessage/" + encodeURIComponent(LINE_OA_ID) + "/?" + encodeURIComponent(lineText),
+      redo: function(){ self.go("pick", { upper: emptyArch(), lower: emptyArch(), armed: null }); },
+      goHome: function(){ self.goHome(); },
+      pinOpen: s.pinOpen, pin: s.pin, hasPinError: !!s.pinError, pinError: s.pinError,
+      openPin: function(){ self.touch({ pinOpen: true, pin: "", pinError: "" }); },
+      cancelPin: function(){ self.touch({ pinOpen: false, pin: "", pinError: "" }); },
+      onPin: function(e){ self.touch({ pin: e.target.value.replace(/[^0-9]/g, "").slice(0, 4), pinError: "" }); },
+      submitPin: function(){ if(self.state.pin === STAFF_PIN) self.go("staff", { pinOpen: false, pin: "" }); else self.touch({ pinError: "รหัสไม่ถูกต้อง ลองใหม่อีกครั้งค่ะ", pin: "" }); },
+      backToPick: function(){ self.go("pick"); },
+      openColors: function(){ self.go("staffColors", { edit: null }); },
+      backToStaff: function(){ self.go("staff", { edit: null }); },
+      staffSwatches: staffSwatches,
+      editing: s.edit != null,
+      editNum: s.edit,
+      editDotStyle: s.edit != null ? "display:inline-block;flex-shrink:0;width:56px;height:56px;border-radius:16px;background:" + (isHex(s.eHex) ? s.eHex : this.col(s.edit)) + ";box-shadow:inset 0 0 0 1px rgba(11,22,119,.12), 0 4px 10px rgba(43,123,248,.16)" : "",
+      editStatus: s.edit != null ? ((s.ovColor[s.edit] ? "ปรับสีแล้ว" : "สีเดิมจากชาร์ต") + " · " + (this.stockOf(s.edit) === null ? "สต็อกไม่จำกัด" : "เหลือ " + this.stockOf(s.edit))) : "",
+      ePicker: isHex(s.eHex) ? s.eHex : (s.edit ? this.col(s.edit) : "#000000"),
+      eHex: s.eHex, eName: s.eName, eCat: s.eCat, eCatCustom: s.eCatCustom, eStock: s.eStock,
+      catOptions: catOptions, catCustom: s.eCat === "__custom__",
+      hasEditError: !!s.eError, eError: s.eError,
+      onPicker: function(e){ self.setState({ eHex: e.target.value, eError: "" }); },
+      onHex: function(e){ self.setState({ eHex: e.target.value, eError: "" }); },
+      onEName: function(e){ self.setState({ eName: e.target.value }); },
+      onECat: function(e){ self.setState({ eCat: e.target.value }); },
+      onECatCustom: function(e){ self.setState({ eCatCustom: e.target.value }); },
+      onEStock: function(e){ self.setState({ eStock: e.target.value, eError: "" }); },
+      saveEdit: function(){ self.saveEdit(); },
+      resetEdit: function(){ self.resetEdit(); },
+      closeEdit: function(){ self.setState({ edit: null, eError: "" }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
