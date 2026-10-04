@@ -1,10 +1,4 @@
-<!doctype html>
-<html lang="th">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#d6ebfc">
-<link rel="icon" href="logo.png">
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>เลือกสียางจัดฟัน</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;600;700;800&family=Prompt:wght@400;500;600&display=swap">
@@ -115,7 +109,6 @@ h1,h2,h3{text-wrap:balance}
 .tooth{position:relative;flex:0 1 35px;min-width:0;width:35px;height:44px;padding:0;background:transparent;border:none;transition:transform .12s ease}
 .arch.lo .tooth{height:42px}
 .tooth.ro{cursor:default}
-.tooth.hover{transform:scale(1.1)}
 .tooth svg.en{position:absolute;inset:0;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 3px rgba(11,22,119,.18))}
 .tooth .gum{position:absolute;z-index:0;left:-2px;right:-2px;height:14px}
 .arch.up .gum{top:-6px;border-radius:0 0 50% 50%/0 0 100% 100%;background:linear-gradient(to bottom,#e9779f,#f39bbd);box-shadow:0 2px 3px rgba(185,40,100,.18)}
@@ -133,6 +126,30 @@ h1,h2,h3{text-wrap:balance}
 .pick h2{margin:0;font-family:var(--font-display);font-weight:700;font-size:24px;line-height:1.2}
 .sticker{background:var(--surface);font-family:var(--font-display);font-weight:600;font-size:13px;padding:6px 12px;border-radius:9999px;transform:rotate(3deg);box-shadow:0 4px 12px rgba(43,123,248,.14);white-space:nowrap}
 .hintbar{background:var(--lilac-100);border-radius:16px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-size:14px;line-height:1.45}
+.themes{padding:14px 14px 16px;display:flex;flex-direction:column;gap:10px}
+.themes .tt{display:flex;flex-direction:column;gap:2px}
+.themes .tt b{font-family:var(--font-display);font-weight:700;font-size:16px;line-height:1.3}
+.themes .tt span{font-size:12px;color:var(--ink-muted)}
+.themehead{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:8px 14px;border:2px solid #fff;border-radius:18px;background:rgba(255,255,255,.7);text-align:left;transition:background .15s ease,box-shadow .15s ease}
+.themehead.open{border-color:var(--pink-600);background:#fff0f6;box-shadow:var(--shadow-pink)}
+.themehead .gdots{display:flex;flex-shrink:0}
+.themehead .gdots .gd{width:22px;height:22px;border-radius:9999px;border:2px solid #fff;box-shadow:0 2px 6px rgba(11,22,119,.18)}
+.themehead .gdots .gd + .gd{margin-left:-8px}
+.themehead .gname{flex:1;font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--ink)}
+.themehead .gnew{display:inline-block;vertical-align:middle;margin-left:6px;padding:2px 8px;border-radius:9999px;background:var(--coral);color:#fff;font-family:var(--font-display);font-weight:700;font-size:10px;letter-spacing:.03em;box-shadow:0 2px 6px rgba(248,96,72,.35)}
+.themehead .gchev{flex-shrink:0;display:flex;transition:transform .2s ease}
+.themehead.open .gchev{transform:rotate(90deg)}
+@media (hover:hover){.themehead:not(.open):hover{background:#f6f8ff}}
+.themerow{display:flex;gap:10px;overflow-x:auto;margin:0 -8px;padding:2px 8px 4px;scrollbar-width:none}
+.themerow::-webkit-scrollbar{display:none}
+.theme{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 8px;border:2px solid #fff;border-radius:18px;background:rgba(255,255,255,.7);min-width:74px;transition:background .15s ease,box-shadow .15s ease,opacity .15s ease}
+.theme.active{border-color:var(--pink-600);background:#fff0f6;box-shadow:var(--shadow-pink)}
+.theme.locked{opacity:.35}
+.theme .duo{display:flex;align-items:center;min-height:22px}
+.theme .duo .md{flex-shrink:0;width:18px;height:18px;border-radius:9999px;border:2px solid #fff;box-shadow:0 2px 4px rgba(11,22,119,.18)}
+.theme .duo .mdmore{font-size:10px;font-weight:700;color:var(--ink-muted);margin-left:4px}
+.theme .tn{font-family:var(--font-display);font-weight:600;font-size:12px;white-space:nowrap}
+@media (hover:hover){.theme:not(.locked):not(.active):hover{background:#f6f8ff}}
 .chips{display:flex;gap:8px;overflow-x:auto;margin:0 -16px;padding:4px 16px 6px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chip{flex-shrink:0;min-height:40px;padding:0 16px;border-radius:9999px;font-family:var(--font-display);font-weight:600;font-size:14px;white-space:nowrap;border:2px solid #fff;background:rgba(255,255,255,.7);color:var(--ink)}
@@ -226,8 +243,6 @@ select.inp{padding:0 16px}
 .pin .acts{width:100%}
 .pin .acts button{flex:1;min-height:48px}
 
-.ghost{position:fixed;z-index:80;width:52px;height:52px;border-radius:50%;pointer-events:none;background:#fff;border:10px solid;box-shadow:0 8px 20px rgba(11,22,119,.35);transform:translate(-50%,-50%) scale(1.1)}
-
 @media (prefers-reduced-motion:no-preference){
   ::view-transition-old(root){animation:fadeOut .16s ease both}
   ::view-transition-new(root){animation:riseIn .3s cubic-bezier(.22,.61,.36,1) both}
@@ -245,9 +260,6 @@ select.inp{padding:0 16px}
   .tooth{width:31px}
 }
 </style>
-</head>
-<body>
-
 
 <div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -273,9 +285,55 @@ var TWO_TONE = {
 };
 var TOTAL = 120;
 Object.keys(TWO_TONE).forEach(function(k){ COLORS[k]=TWO_TONE[k][0]; NAME_BASE[k]=TWO_TONE[k][2]; CATEGORY_BASE[k]="ทูโทน"; });
-var TEETH = 8, MAX_COLORS = 2, STAFF_PIN = "5555", LOW_STOCK = 5, IDLE_MS = 45000;
+var TEETH = 8, MAX_COLORS = 3, STAFF_PIN = "5555", LOW_STOCK = 5, IDLE_MS = 45000;
 var LINE_OA_ID = "@dentory", CLINIC = "Dentory Dental Clinic", STORE_KEY = "dentory-braces-overrides";
 var FB_URL = "https://www.facebook.com/dentoryclinic";
+/* Theme shortcuts: tap a group to open it, then tap a theme to lay its color numbers across every tooth in order (repeating from the start once the list runs out). */
+var THEMES = [
+  {name:"Ariel", colors:[19,49]},
+  {name:"Snow White", colors:[48,29]},
+  {name:"Jasmine", colors:[13,23]},
+  {name:"Cinderella", colors:[23,29]},
+  {name:"Anna", colors:[51,28]},
+  {name:"Belle", colors:[103,77]},
+  {name:"Merida", colors:[105,96]},
+  {name:"Rapunzel", colors:[54,43]}
+];
+var MULTI_THEMES = [
+  {name:"สีรุ้ง", colors:[49,70,77,6,29,30,53]},
+  {name:"สีรุ้งเมอร์เมด", colors:[77,14,10,23,25,28,54,60]},
+  {name:"สีรุ้งกลิตเตอร์", colors:[101,105,106,98,95,94,92]},
+  {name:"สียางยูนิคอร์น", colors:[53,54,56,23,27,29,30]},
+  {name:"สียางเรนโบว์", colors:[77,15,35,41,61,104,69]},
+  {name:"สียางไล่โทนฟ้าน้ำเงิน", colors:[30,29,22,23,35]},
+  {name:"สียางพาสเทลมาร์ชเมลโล่", colors:[60,67,35,45]},
+  {name:"สียางไล่โทนส้มเหลือง", colors:[70,78,77,67,66]},
+  {name:"สียางไล่โทนชมพูม่วง", colors:[56,55,42,54,53]},
+  {name:"สียางบาร์บี้", colors:[48,77,75]},
+  {name:"สียางสตอเบอรี่", colors:[58,61,57,71,89,51]},
+  {name:"สียางสะท้อนแสง", colors:[80,79,76]}
+];
+var HALLOWEEN_THEMES = [
+  {name:"No.47", colors:[47]},
+  {name:"No.77", colors:[77]},
+  {name:"No.54", colors:[54]},
+  {name:"No.13", colors:[13]},
+  {name:"No.49", colors:[49]},
+  {name:"No.73", colors:[73]},
+  {name:"No.88+73", colors:[88,73]},
+  {name:"No.92+88", colors:[92,88]},
+  {name:"No.54+73", colors:[54,73]},
+  {name:"No.88+76", colors:[88,76]},
+  {name:"No.92+76", colors:[92,76]},
+  {name:"No.73+49", colors:[73,49]},
+  {name:"No.77+47", colors:[77,47]},
+  {name:"No.73+82", colors:[73,82]}
+];
+var THEME_GROUPS = [
+  {key:"halloween", name:"ธีมฮัลโลวีน", items:HALLOWEEN_THEMES, isNew:true, refImgs:["halloween-ref.png","halloween-ref2.png"]},
+  {key:"princess", name:"ธีมเจ้าหญิง", items:THEMES},
+  {key:"multi", name:"ธีมหลายสี", items:MULTI_THEMES}
+];
 
 var I = {
   phone:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>',
@@ -330,7 +388,7 @@ var EMPTY_DOT = "display:inline-block;flex-shrink:0;width:28px;height:28px;borde
 
 /* ---------- state ---------- */
 var S = {
-  view:"splash", upper:emptyArch(), lower:emptyArch(), armed:null, filter:"all",
+  view:"splash", upper:emptyArch(), lower:emptyArch(), armed:null, filter:"all", themeOpen:null,
   name:"", phone:"", phoneError:"", apptDate:"", note:"", submitError:"", paletteError:"", chartOpen:false,
   pinOpen:false, pinError:"",
   ovColor:{}, ovColor2:{}, ovName:{}, ovCat:{}, stock:{},
@@ -361,6 +419,35 @@ function categories(){
 }
 function canSubmit(){ return used().length>0 && S.name.trim().length>0 && !S.phoneError; }
 function lockMsg(n){ return !inStock(n) ? "สีเบอร์ "+n+" หมดชั่วคราวค่ะ ลองเลือกสีอื่นนะคะ" : "เลือกได้สูงสุด "+MAX_COLORS+" สีค่ะ ลบสีเดิมออกก่อนนะ"; }
+function themeLocked(t){
+  for(var i=0;i<t.colors.length;i++){ if(!inStock(t.colors[i])) return true; }
+  return false;
+}
+function themeUnique(colors){
+  var out=[]; colors.forEach(function(c){ if(out.indexOf(c)===-1) out.push(c); });
+  return out.sort(function(a,b){return a-b;});
+}
+function themeActive(t){
+  var u = used().slice().sort(function(a,b){return a-b;});
+  var tc = themeUnique(t.colors);
+  if(u.length!==tc.length) return false;
+  for(var i=0;i<u.length;i++){ if(u[i]!==tc[i]) return false; }
+  return true;
+}
+function groupByKey(k){
+  for(var i=0;i<THEME_GROUPS.length;i++){ if(THEME_GROUPS[i].key===k) return THEME_GROUPS[i]; }
+  return null;
+}
+function applyTheme(gk, i){
+  var g = groupByKey(gk); if(!g) return;
+  var t = g.items[i]; if(!t) return;
+  for(var j=0;j<t.colors.length;j++){
+    if(!inStock(t.colors[j])){ S.paletteError=lockMsg(t.colors[j]); render(); return; }
+  }
+  var arr=[]; for(var k=0;k<TEETH;k++) arr.push(t.colors[k % t.colors.length]);
+  S.upper=arr.slice(); S.lower=arr.slice(); S.armed=null; S.paletteError="";
+  render();
+}
 
 /* ---------- render ---------- */
 var app = document.getElementById("app");
@@ -459,7 +546,7 @@ function renderMouth(){
     (pick && S.armed!=null ? '<button type="button" class="fillall" data-act="fillAll"><span style="'+dot(bc(S.armed),28,false)+'"></span>ใส่สีเบอร์ '+S.armed+' ทั้งปากเลย (16 ซี่)</button>' : '') +
     '<span class="archlbl">ฟันบน</span><div class="arch up">'+renderTeeth("upper")+'</div>' +
     '<span class="archlbl">ฟันล่าง</span><div class="arch lo">'+renderTeeth("lower")+'</div>' +
-    (pick ? '<p class="hint">แตะสียางด้านล่าง แล้วแตะซี่ฟันที่อยากวาง · กดค้างที่สีแล้วลากไปวางบนฟันก็ได้ · แตะซี่ที่มีสีอีกครั้งเพื่อลบ</p>' : '') +
+    (pick ? '<p class="hint">แตะสียางด้านล่าง แล้วแตะซี่ฟันที่อยากวาง · หรือกดปุ่ม "ทั้งปากเลย" เพื่อใส่สีเดียวกันครบทุกซี่ในคลิกเดียว · แตะซี่ที่มีสีอีกครั้งเพื่อลบ</p>' : '') +
   '</section>';
 }
 
@@ -483,6 +570,45 @@ function bandSvg(n){
 }
 function pad(n){ return n<10?"0"+n:String(n); }
 
+function themeDots(colors){
+  var MAXSHOW = 5, show = colors.slice(0,MAXSHOW), extra = colors.length-show.length;
+  var out = show.map(function(c,i){ return '<span class="md" style="background:'+col(c)+(i>0?";margin-left:-7px":"")+'"></span>'; }).join("");
+  if(extra>0) out += '<span class="mdmore">+'+extra+'</span>';
+  return out;
+}
+function renderThemeGroup(g){
+  var open = S.themeOpen===g.key;
+  var preview = g.items.slice(0,3).map(function(t){ return '<span class="gd" style="background:'+col(t.colors[0])+'"></span>'; }).join("");
+  var head = '<button type="button" class="themehead'+(open?" open":"")+'" data-act="themeGroup" data-g="'+esc(g.key)+'" aria-expanded="'+open+'">' +
+      '<span class="gdots">'+preview+'</span>' +
+      '<span class="gname">'+esc(g.name)+(g.isNew?' <span class="gnew">ใหม่</span>':'')+'</span>' +
+      '<span class="gchev">'+I.chev+'</span>' +
+    '</button>';
+  var row = "";
+  if(open){
+    var cards = g.items.map(function(t,i){
+      var active = themeActive(t), locked = themeLocked(t);
+      return '<button type="button" class="theme'+(active?" active":"")+(locked?" locked":"")+'" data-act="theme" data-g="'+esc(g.key)+'" data-i="'+i+'" aria-pressed="'+active+'" aria-label="ธีม '+esc(t.name)+' ('+t.colors.length+' สี)'+(locked?" ของหมดชั่วคราว":" แตะใส่สีให้ทั้งปาก")+'">' +
+        '<span class="duo">'+themeDots(t.colors)+'</span>' +
+        '<span class="tn">'+esc(t.name)+'</span>' +
+      '</button>';
+    }).join("");
+    row = '<div class="themerow" role="toolbar" aria-label="'+esc(g.name)+'">'+cards+'</div>';
+    if(g.refImgs && g.refImgs.length){
+      var imgs = g.refImgs.map(function(src,i){ return '<img src="'+esc(src)+'" alt="โปสเตอร์'+esc(g.name)+'ต้นฉบับจากคลินิก '+(i+1)+'" loading="lazy"'+(i>0?' style="margin-top:10px"':'')+'>'; }).join("");
+      row += '<div class="chart" style="margin-top:10px">'+imgs+'<p>ภาพโปสเตอร์ต้นฉบับจากคลินิก Dentory ไว้เทียบเบอร์สีได้นะคะ</p></div>';
+    }
+  }
+  return head + row;
+}
+function renderThemes(){
+  var groups = THEME_GROUPS.map(renderThemeGroup).join("");
+  return '<section class="card themes">' +
+    '<div class="tt"><b>ธีมสุดฮิต <span class="heart">♡</span></b><span>เลือกกลุ่มธีม แล้วแตะสีที่ชอบ ใส่สีสลับให้ทั้งปากเลย</span></div>' +
+    groups +
+  '</section>';
+}
+
 function renderPick(){
   var cats = categories();
   var chips = ["all"].concat(cats).map(function(c){
@@ -494,17 +620,26 @@ function renderPick(){
     if(S.filter!=="all" && cat(n)!==S.filter) continue;
     var armed=S.armed===n, cnt=countOf(n), locked=!canUse(n), st=stockOf(n);
     var oos = st!==null && st<=0, low = !oos && st!==null && st<=LOW_STOCK, nm=cname(n);
-    sw += '<button type="button" class="sw'+(armed?" armed":"")+(locked&&!oos?" locked":"")+'" data-swatch="'+n+'" aria-pressed="'+armed+'" aria-label="สียางเบอร์ '+n+' โทน'+esc(nm)+(oos?" (หมดชั่วคราว)":(locked?" (เลือกครบ 2 สีแล้ว)":""))+'">' +
+    sw += '<button type="button" class="sw'+(armed?" armed":"")+(locked&&!oos?" locked":"")+'" data-swatch="'+n+'" aria-pressed="'+armed+'" aria-label="สียางเบอร์ '+n+' โทน'+esc(nm)+(oos?" (หมดชั่วคราว)":(locked?" (เลือกครบ "+MAX_COLORS+" สีแล้ว)":""))+'">' +
       '<span class="no">'+pad(n)+'</span>'+bandSvg(n)+'<span class="nm">'+esc(nm)+'</span>' +
       (cnt>0?'<span class="cnt">'+cnt+'</span>':'') + (oos?'<span class="oos">หมดชั่วคราว</span>':'') + (low?'<span class="low">'+st+'</span>':'') +
     '</button>';
   }
   if(!sw) sw = '<p class="muted" style="grid-column:1/-1;text-align:center;margin:12px 0">ไม่มีสีในหมวดนี้</p>';
   var u = used();
-  var dots = u.length ? u.map(function(n,i){ return '<span style="'+dot(bc(n),28,i>0)+(i>0?";margin-left:-8px":"")+'"></span>'; }).join("") : '<span style="display:inline-block;width:28px;height:28px;border-radius:9999px;border:2px dashed #b0defc;box-sizing:border-box"></span>';
+  var DOTS_MAX = 4;
+  var dots;
+  if(!u.length){
+    dots = '<span style="display:inline-block;width:28px;height:28px;border-radius:9999px;border:2px dashed #b0defc;box-sizing:border-box"></span>';
+  }else{
+    var uShown = u.slice(0,DOTS_MAX);
+    dots = uShown.map(function(n,i){ return '<span style="'+dot(bc(n),28,i>0)+(i>0?";margin-left:-8px":"")+'"></span>'; }).join("");
+    if(u.length>DOTS_MAX) dots += '<span style="display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:9999px;background:var(--ink);color:#fff;font-family:var(--font-display);font-weight:700;font-size:11px;margin-left:-8px;box-shadow:0 0 0 2px #fff">+'+(u.length-DOTS_MAX)+'</span>';
+  }
   return '<section class="pick">' +
-    '<div class="hrow"><h2>Pick your vibe <span class="heart">♡</span></h2><span class="sticker">'+TOTAL+' สี · เลือกได้ 2 สี</span></div>' +
-    '<div class="hintbar" aria-live="polite"><span style="'+(S.armed!=null?dot(bc(S.armed),28,false):EMPTY_DOT)+'"></span><span>'+(S.armed!=null?"ถือสีเบอร์ "+S.armed+" ("+esc(cname(S.armed))+") อยู่ แตะซี่ฟันที่อยากวางได้เลย":"แตะสีเพื่อหยิบ แล้วแตะซี่ฟัน · สลับลาย 2 สีได้นะ")+'</span></div>' +
+    renderThemes() +
+    '<div class="hrow"><h2>Pick your vibe <span class="heart">♡</span></h2><span class="sticker">'+TOTAL+' สี · เลือกได้สูงสุด '+MAX_COLORS+' สี</span></div>' +
+    '<div class="hintbar" aria-live="polite"><span style="'+(S.armed!=null?dot(bc(S.armed),28,false):EMPTY_DOT)+'"></span><span>'+(S.armed!=null?"ถือสีเบอร์ "+S.armed+" ("+esc(cname(S.armed))+") อยู่ แตะซี่ฟันที่อยากวางได้เลย":"แตะสีเพื่อหยิบ แล้วแตะซี่ฟัน · ผสมได้หลายสีนะ")+'</span></div>' +
     '<div class="chips" role="toolbar" aria-label="หมวดสี">'+chips+'</div>' +
     (S.paletteError?'<p class="err" role="alert">'+esc(S.paletteError)+'</p>':'') +
     '<div class="card swcard"><div class="rule"></div><div class="grid">'+sw+'</div><div class="rule b"></div></div>' +
@@ -519,7 +654,7 @@ function renderPick(){
       (S.submitError?'<p class="err" role="alert">'+esc(S.submitError)+'</p>':'') +
     '</form>' +
   '</section>' +
-  '<div class="bottom"><div class="pickbar"><div class="used"><div class="dots">'+dots+'</div><span class="lbl">'+u.length+'/'+MAX_COLORS+' สี</span></div>' +
+  '<div class="bottom"><div class="pickbar"><div class="used"><div class="dots">'+dots+'</div><span class="lbl">'+(u.length>MAX_COLORS?"ใช้ "+u.length+" สี":u.length+"/"+MAX_COLORS+" สี")+'</span></div>' +
     '<button type="button" class="submit'+(canSubmit()?"":" off")+'" id="submitBtn" data-act="submit" aria-disabled="'+!canSubmit()+'">ยืนยันเลย</button></div></div>';
 }
 
@@ -672,9 +807,7 @@ function resetEdit(){
 }
 
 /* ---------- events ---------- */
-var suppressClick = false;
 app.addEventListener("click", function(e){
-  if(suppressClick){ suppressClick=false; e.preventDefault(); return; }
   var sw = e.target.closest("[data-swatch]");
   if(sw){ pickSwatch(parseInt(sw.getAttribute("data-swatch"),10)); return; }
   var el = e.target.closest("[data-act]"); if(!el) return;
@@ -684,6 +817,8 @@ app.addEventListener("click", function(e){
     case "tooth": tapTooth(el.getAttribute("data-arch"), parseInt(el.getAttribute("data-idx"),10)); break;
     case "clearAll": S.upper=emptyArch(); S.lower=emptyArch(); S.paletteError=""; render(); break;
     case "fillAll": if(S.armed!=null){ var arr=[]; for(var i=0;i<TEETH;i++) arr.push(S.armed); S.upper=arr.slice(); S.lower=arr.slice(); S.paletteError=""; render(); } break;
+    case "theme": applyTheme(el.getAttribute("data-g"), parseInt(el.getAttribute("data-i"),10)); break;
+    case "themeGroup": { var gk=el.getAttribute("data-g"); S.themeOpen = (S.themeOpen===gk?null:gk); render(); } break;
     case "filter": S.filter=el.getAttribute("data-v"); render(); break;
     case "chart": S.chartOpen=!S.chartOpen; render(); break;
     case "submit": submit(); break;
@@ -736,47 +871,6 @@ function syncSubmit(){
   var ok=canSubmit(); b.classList.toggle("off",!ok); b.setAttribute("aria-disabled",String(!ok));
 }
 
-/* ---------- drag & drop: long-press a swatch, drag onto a tooth ---------- */
-var drag = null;
-function toothAt(x,y){ var el=document.elementFromPoint(x,y); return el && el.closest ? el.closest("[data-tooth]") : null; }
-app.addEventListener("pointerdown", function(ev){
-  var btn = ev.target.closest("[data-swatch]");
-  if(!btn || S.view!=="pick" || (ev.pointerType==="mouse" && ev.button!==0)) return;
-  var num=parseInt(btn.getAttribute("data-swatch"),10), x0=ev.clientX, y0=ev.clientY, pid=ev.pointerId, moved=false;
-  var timer = setTimeout(function(){
-    if(moved || !canUse(num)) return;
-    var g=document.createElement("div"); g.className="ghost"; g.style.borderColor=bc(num); g.style.left=x0+"px"; g.style.top=y0+"px";
-    document.body.appendChild(g);
-    drag={num:num,ghost:g,pid:pid,hover:null};
-    try{ btn.setPointerCapture(pid); }catch(e){}
-    if(navigator.vibrate) try{ navigator.vibrate(15); }catch(e){}
-  }, ev.pointerType==="mouse" ? 140 : 220);
-  function onMove(mv){
-    if(mv.pointerId!==pid) return;
-    if(!drag){ if(Math.hypot(mv.clientX-x0,mv.clientY-y0)>8){ moved=true; clearTimeout(timer); } return; }
-    drag.ghost.style.left=mv.clientX+"px"; drag.ghost.style.top=mv.clientY+"px";
-    var t=toothAt(mv.clientX,mv.clientY);
-    if(drag.hover&&drag.hover!==t) drag.hover.classList.remove("hover");
-    if(t) t.classList.add("hover");
-    drag.hover=t;
-  }
-  function onUp(up){
-    if(up.pointerId!==pid) return;
-    clearTimeout(timer);
-    document.removeEventListener("pointermove",onMove); document.removeEventListener("pointerup",onUp); document.removeEventListener("pointercancel",onUp);
-    if(drag){
-      var t = up.type==="pointercancel" ? null : toothAt(up.clientX,up.clientY);
-      drag.ghost.remove();
-      var n=drag.num; drag=null; suppressClick=true; setTimeout(function(){ suppressClick=false; }, 400);
-      if(t){ placeOn(t.getAttribute("data-arch"), parseInt(t.getAttribute("data-idx"),10), n); }
-      render();
-    }
-  }
-  document.addEventListener("pointermove",onMove); document.addEventListener("pointerup",onUp); document.addEventListener("pointercancel",onUp);
-});
-document.addEventListener("touchmove", function(e){ if(drag) e.preventDefault(); }, {passive:false});
-app.addEventListener("contextmenu", function(e){ if(e.target.closest("[data-swatch]")) e.preventDefault(); });
-
 /* ---------- idle reset (kiosk): back to splash after 45 s on pick/confirm ---------- */
 var idleTimer = null;
 function resetIdle(){
@@ -789,5 +883,4 @@ render();
 })();
 </script>
 
-</body>
-</html>
+</body></html>
